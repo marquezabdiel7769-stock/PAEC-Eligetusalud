@@ -1,0 +1,360 @@
+/* Paleta inspirada en la identidad gráfica federal: guinda #611232 / #9F2241, dorado #A57F2C / #E6D194, verde #1E5B4F */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans", Montserrat, Arial, sans-serif;
+  background: #f5f5f5;
+  color: #161a1d;
+}
+header {
+  background: #611232;
+  color: #fff;
+  padding: 18px 28px;
+}
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+header .lema {
+  margin: 4px 0 0;
+  opacity: 0.9;
+}
+nav {
+  display: flex;
+  gap: 6px;
+  background: #4a0d24;
+  padding: 0 22px;
+}
+nav a {
+  color: #e6d194;
+  text-decoration: none;
+  padding: 12px 14px;
+  font-weight: bold;
+}
+nav a:hover {
+  background: #611232;
+}
+nav a.activo {
+  background: #f5f5f5;
+  color: #611232;
+  border-radius: 8px 8px 0 0;
+}
+main {
+  padding: 20px 28px;
+  min-height: 360px;
+}
+.seccion {
+  display: none;
+}
+.seccion.activa {
+  display: block;
+}
+h2 {
+  color: #611232;
+  margin-top: 0;
+}
+.palabra {
+  display: flex;
+  gap: 6px;
+  margin: 18px 0;
+}
+.palabra span {
+  background: #611232;
+  color: #e6d194;
+  font-size: 30px;
+  font-weight: bold;
+  width: 46px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  animation: aparecer 0.4s both;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.temas {
+  font-style: italic;
+  color: #545454;
+}
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.filtros button {
+  border: 2px solid #611232;
+  background: #fff;
+  color: #611232;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.filtros button.activo {
+  background: #611232;
+  color: #fff;
+}
+.filtros input {
+  margin-left: auto;
+  padding: 7px 12px;
+  border: 1px solid #9bb;
+  border-radius: 20px;
+  width: 240px;
+}
+.zona {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 16px;
+  align-items: start;
+}
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.tarjeta {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  border-top: 5px solid #999;
+}
+.tarjeta.legal {
+  border-top-color: #a57f2c;
+}
+.tarjeta.prohibida {
+  border-top-color: #9f2241;
+}
+.tarjeta.indebido {
+  border-top-color: #1e5b4f;
+}
+.tarjeta h3 {
+  margin: 6px 0;
+}
+.tarjeta p {
+  margin: 0;
+  font-size: 14px;
+  color: #545454;
+}
+.etiqueta {
+  font-size: 12px;
+  color: #6f7271;
+}
+.vacio {
+  color: #c0392b;
+  font-weight: bold;
+}
+.ficha {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.ficha h3 {
+  margin: 0 0 8px;
+  color: #611232;
+}
+.ficha table {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.ficha th {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px 8px 4px 0;
+  color: #9f2241;
+  white-space: nowrap;
+}
+.ficha td {
+  padding: 4px 0;
+}
+.posicion {
+  font-size: 13px;
+  color: #6f7271;
+  margin-bottom: 0;
+}
+.contador {
+  font-weight: bold;
+  color: #9f2241;
+}
+.mitos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.mito {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+.mito .frase {
+  font-weight: bold;
+  margin: 0;
+}
+.mito .realidad {
+  display: none;
+  margin: 8px 0 0;
+  color: #1e5b4f;
+}
+.mito.revelado {
+  background: #f4ecd6;
+}
+.mito.revelado .realidad {
+  display: block;
+}
+.test {
+  display: grid;
+  gap: 8px;
+  max-width: 760px;
+}
+.pregunta {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.test button {
+  justify-self: start;
+  background: #611232;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.resultado {
+  max-width: 760px;
+  margin-top: 14px;
+  border-radius: 10px;
+}
+.resultado p {
+  margin: 6px 0;
+}
+.resultado.bajo {
+  background: #e1eeea;
+  padding: 10px 14px;
+}
+.resultado.medio {
+  background: #f4ecd6;
+  padding: 10px 14px;
+}
+.resultado.alto {
+  background: #f6dde3;
+  padding: 10px 14px;
+}
+.aviso {
+  font-size: 13px;
+  color: #6f7271;
+}
+.consejos {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.consejos li {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.consejos p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #545454;
+}
+.numero {
+  background: #a57f2c;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ayuda {
+  margin-top: 16px;
+  background: #1e5b4f;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 18px;
+}
+.ayuda h3 {
+  margin: 0 0 6px;
+  color: #e6d194;
+}
+.ayuda p {
+  margin: 4px 0;
+}
+footer {
+  text-align: center;
+  font-size: 13px;
+  color: #6f7271;
+  padding: 14px;
+}
+/* ===== Retos ===== */
+.resultados {
+  font-size: 14px;
+  font-weight: bold;
+  color: #611232;
+  margin: 0 0 10px;
+}
+.btn-ocultar {
+  background: #611232;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.fuentes {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 18px 14px 36px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  max-width: 820px;
+}
+.fuentes li {
+  margin: 6px 0;
+}
+@media (max-width: 800px) {
+  .zona {
+    grid-template-columns: 1fr;
+  }
+  .tarjetas,
+  .mitos,
+  .consejos {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-wrap: wrap;
+  }
+  .filtros input {
+    margin-left: 0;
+    width: 100%;
+  }
+}

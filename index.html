@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAEC · Elige tu salud</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1 id="titulo">Mi página PAEC</h1>
+    <p class="lema">Escribe aquí el lema</p>
+  </header>
+
+  <nav>
+    <a href="#" data-seccion="inicio">Inicio</a>
+    <a href="#" data-seccion="sustancias">Sustancias</a>
+    <a href="#" data-seccion="mitos">Mitos</a>
+    <a href="#" data-seccion="test">Autoevaluación</a>
+    <a href="#" data-seccion="prevencion">Prevención</a>
+    <!-- Reto: sexta sección -->
+    <a href="#" data-seccion="fuentes">Fuentes</a>
+  </nav>
+
+  <main>
+    <section id="inicio" class="seccion activa">
+      <h2>Conocer los riesgos también es cuidarte</h2>
+      <p>Esta página forma parte del PAEC del grupo 5AV. Su propósito es informar sobre los
+        riesgos del consumo de sustancias nocivas y promover la prevención y el autocuidado.</p>
+      <div id="palabra" class="palabra"></div>
+      <p id="temas" class="temas"></p>
+    </section>
+
+    <section id="sustancias" class="seccion">
+      <h2>Sustancias y sus riesgos</h2>
+      <div class="filtros">
+        <button data-tipo="todas" class="activo">Todas</button>
+        <button data-tipo="legal">Legales para adultos</button>
+        <button data-tipo="prohibida">Prohibidas o ilegales</button>
+        <button data-tipo="indebido">Uso indebido de productos</button>
+        <input type="search" id="buscador" placeholder="Buscar sustancia o efecto...">
+      </div>
+      <!-- Reto: contador de resultados -->
+      <p id="contadorResultados" class="resultados"></p>
+      <div class="zona">
+        <div id="tarjetas" class="tarjetas"></div>
+        <aside id="ficha" class="ficha"><p>Haz clic en una tarjeta para ver su ficha.</p></aside>
+      </div>
+    </section>
+
+    <section id="mitos" class="seccion">
+      <h2>Mitos y realidades</h2>
+      <p id="contadorMitos" class="contador">Haz clic en cada mito para descubrir la realidad.</p>
+      <!-- Reto: ocultar realidades -->
+      <button id="btnOcultar" class="btn-ocultar">Ocultar todas las realidades</button>
+      <div id="listaMitos" class="mitos"></div>
+    </section>
+
+    <section id="test" class="seccion">
+      <h2>Autoevaluación: ¿qué situaciones de riesgo vives?</h2>
+      <p>Marca las situaciones que te pasan. Nadie más verá tus respuestas.</p>
+      <form id="formTest" class="test"></form>
+      <div id="resultado" class="resultado"></div>
+    </section>
+
+    <section id="prevencion" class="seccion">
+      <h2>Prevención y autocuidado</h2>
+      <ol id="consejos" class="consejos"></ol>
+      <div class="ayuda">
+        <h3>¿Necesitas ayuda o tienes dudas?</h3>
+        <p><strong>Línea de la Vida: 800 911 2000</strong> · gratuita, las 24 horas, los 365 días.</p>
+        <p><strong>Emergencias: 911</strong> · si alguien está en peligro inmediato.</p>
+        <p>También puedes acercarte a orientación educativa de tu plantel o a los Centros de Integración Juvenil (CIJ).</p>
+      </div>
+    </section>
+
+    <!-- Reto: sección Fuentes -->
+    <section id="fuentes" class="seccion">
+      <h2>Fuentes consultadas</h2>
+      <ol id="listaFuentes" class="fuentes"></ol>
+    </section>
+  </main>
+
+  <footer>Actividad 28 · Construye aplicaciones web · 5AV · CBTis No. 187</footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
